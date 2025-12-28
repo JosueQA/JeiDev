@@ -1,0 +1,13 @@
+{# Minimal Django footer include (no styles) #}
+<footer>
+    {% block footer %}
+    <div class="footer-content">
+        <p>&copy; {{ now|date:"Y" }} - {{ site_name|default:"My Site" }}</p>
+        <p>
+            <a href="">Privacy</a> |
+            <a href="">Terms</a>
+        </p>
+    </div>
+    {% endblock %}
+
+{# Usage: {% include 'footer.html' %} #}
