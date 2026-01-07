@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+
+/* 📍 Rutas de templates Django */
+@source "../../jeidev_project/templates/*.html";
+@source "../../jeidev_project/**/templates/**/*.html";
+
+
+/* Configuración visual */
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
