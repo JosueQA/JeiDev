@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* Configuración Tailwind v4 */
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}

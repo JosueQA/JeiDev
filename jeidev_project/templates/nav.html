@@ -1,25 +1,28 @@
 {# Minimal Django navigation include (no styles) #}
+{% comment %}Site logo / home link{% endcomment %}
 <nav>
-	{% comment %}Site logo / home link{% endcomment %}
-	<div class="nav-brand">
-		<a href="{% url 'home' %}">Home</a>
-	</div>
+  <div class="nav-brand">
+    <a href="{% url 'home' %}">Home</a>
+  </div>
 
-	{% comment %}Primary navigation links{% endcomment %}
-	<ul class="nav-links">
-		<li><a href="{% url 'contact' %}">Contact</a></li>
-		<li><a href="{% url 'app_home' %}">Apps</a></li>
-	</ul>
+  {% comment %}Primary navigation links{% endcomment %}
+  <ul class="nav-links">
+    <li>
+      <a href="{% url 'contact' %}">Contact</a>
+    </li>
+    <li>
+      <a href="{% url 'app_home' %}">Apps</a>
+    </li>
+  </ul>
 
-	{% comment %}Authentication links (example) {% endcomment %}
-	<div class="nav-auth">
-		{% if user.is_authenticated %}
-			<a href="">Dashboard</a>
-			<a href="">Logout</a>
-		{% else %}
-			<a href="">Login</a>
-		{% endif %}
-	</div>
+  {% comment %}Authentication links (example){% endcomment %}
+  <div class="nav-auth">
+    {% if user.is_authenticated %}
+      <a href="">Dashboard</a>
+      <a href="">Logout</a>
+    {% else %}
+      <a href="">Login</a>
+    {% endif %}
+  </div>
 </nav>
-
 {# Usage: {% include 'nav.html' %} #}

@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "tailwindcss": "^4.1.18"
+  }, 
+  "scripts": {
+    "tailwind": "npx @tailwindcss/cli -c ./tailwind.config.js -i ./src/input.css -o ./jeidev_project/static/dist/output.css --watch",
+    "django": "cd jeidev_project && python manage.py runserver"
+  }
+}
