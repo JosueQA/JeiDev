@@ -11,3 +11,153 @@
   --font-sans: "Inter", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 }
+
+:root {
+  /* Base */
+  --color-bg: #0f172a;
+  --color-surface: #1e293b;
+
+  /* Texto */
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+
+  /* Acento */
+  --color-accent: #3b82f6;
+  --color-accent-hover: #2563eb;
+
+  /* Bordes */
+  --color-border: #334155;
+
+
+  /* ───────── Espaciado interno (padding) ───────── */
+
+  --space-inline-text: 0.5rem;
+  /* texto cercano, labels, inputs, iconos pequeños */
+
+  --space-box-p: 1.25rem;
+  /* padding estándar de cards, bloques, contenedores */
+
+  --space-section-p: 2rem;
+  /* padding interno de secciones (main, footer, cta) */
+
+
+  /* ───────── Espaciado entre bloques (margin) ───────── */
+
+  --space-block-gap-m: 2rem;
+  /* separación normal entre secciones */
+
+  --space-section-gap-m: 3.5rem;
+  /* separación fuerte entre secciones */
+
+
+  /* ───────── Espaciado dominante ───────── */
+
+  --space-hero-gap-mb: 6rem;
+  /* hero → siguiente sección / cortes grandes */
+}
+
+
+/* --- Esta inactivo aun, se guarda para despues configurar y usar --- */
+.theme-light {
+  /* Base */
+  --color-bg: #ffffff;
+  --color-surface: #f8fafc;
+
+  /* Texto */
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+
+  /* Acento */
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+
+  /* Bordes */
+  --color-border: #e2e8f0;
+}
+
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+}
+
+h1 {
+  @apply text-4xl font-extrabold mb-4 tracking-tight;
+}
+
+svg {
+  @apply text-white size-7;
+} 
+
+svg path {
+  fill: currentColor;
+}
+
+p {
+  @apply text-slate-400 text-lg 
+}
+
+h2 {
+  @apply text-3xl  font-bold mb-6;
+}
+
+
+
+/* Estilos para la sección de experiencia */
+
+.experience-item {
+  @apply flex justify-between gap-6;
+}
+
+.experience-main {
+  @apply flex flex-col gap-3;
+}
+
+.experience-time {
+  @apply flex items-start;
+}
+
+/* Estilos para la sección de CTA */
+
+.btn-primary {
+  @apply flex items-center gap-2 px-6 py-3 rounded-lg font-medium bg-blue-500 text-white;
+}
+
+.icon-link {
+  @apply flex flex-col items-center gap-1 text-xs opacity-80;
+}
+
+
+/* Estilos para la sección de proyectos */
+
+.category-pill {
+  @apply px-4 py-2 text-sm rounded-full;
+}
+
+.software-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6;
+}
+
+.software-card {
+  @apply flex flex-col justify-between gap-6 p-5 rounded-lg;
+}
+
+.action-btn {
+  @apply px-4 py-2 text-sm rounded-md bg-slate-100 dark:bg-slate-800/50 rounded-full border border-slate-200 dark:border-slate-700/50 ;
+}
+/*skill-tag flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-800/50 rounded-full border border-slate-200 dark:border-slate-700/50*/
+.page-btn {
+  @apply px-3 py-1 rounded-md;
+}
+
+
+/* Tech labels */
+
+.tech-contain{
+  @apply flex flex-wrap justify-center gap-4 items-center
+}
+
+.tech-item {
+  @apply bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-2 text-slate-300 text-sm font-mono
+}

@@ -6,3 +6,9 @@ class HomeView(TemplateView):
 
 class ContactView(TemplateView):
     template_name = "core/contact.html"
+
+class AboutView(TemplateView):
+    template_name = "core/about.html"
+
+class DonateView(TemplateView):
+    template_name = "core/donate.html"

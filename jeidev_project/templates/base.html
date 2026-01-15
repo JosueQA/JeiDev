@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
     {% load static %}
     <link rel="stylesheet" href="{% static 'dist/output.css' %}" />
 
@@ -16,24 +16,20 @@
       {% endblock %}
     </title>
   </head>
-  <body class="font-sans ">
+  <body class="border flex flex-col min-h-screen justify-between items-center">
     <header>
       {% include 'nav.html' %}
-      
-      {% block hero %}
-      <div><h1 class="bg-amber-200 font-sans" >Hello</h1></div>
 
+      {% block hero %}
       {% endblock %}
     </header>
 
-    <main>
+    <main class="flex flex-col items-center">
       {% block content %}
-
-      {% endblock %}
+      {% endblock %}  
     </main>
 
     {% block cta %}
-
     {% endblock %}
 
     {% include 'footer.html' %}

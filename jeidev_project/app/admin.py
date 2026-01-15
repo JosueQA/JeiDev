@@ -3,7 +3,7 @@ from .models import AppModel
 
 class AppModelAdmin(admin.ModelAdmin):
     model = AppModel
-    list_display = ('name', 'description', 'slug')
+    list_display = ('name', 'description', 'slug', 'iframe')
     search_fields = ('name',)
     prepopulated_fields = {"slug": ("name",)}
 

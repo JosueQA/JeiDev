@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  About me
+{% endblock %}
+
+{% block hero %}
+  <div>
+    <div id="image"></div>
+
+    <div id="">
+      <h1>Josue Q Alvarez (JeiDev)</h1>
+    </div>
+  </div>
+  <p>Soy desarrollador de software freelance. Me gusta crear contenido en redes sociales y transformar ideas en realidades.</p>
+{% endblock %}
+
+{% block content %}
+<section class="flex flex-col items-center ">
+  <header class="tech-stack__header">
+    <h2>Tech Stack</h2>
+  </header>
+
+  <div class="tech-contain w-3/5">
+    <span class="tech-item">React</span>
+    <span class="tech-item">TypeScript</span>
+    <span class="tech-item">Tailwind CSS</span>
+    <span class="tech-item">Node.js</span>
+    <span class="tech-item">Python</span>
+    <span class="tech-item">GraphQL</span>
+    <span class="tech-item">PostgreSQL</span>
+    <span class="tech-item">AWS</span>
+    <span class="tech-item">Docker</span>
+    <span class="tech-item">Git</span>
+    <span class="tech-item">Figma</span>
+  </div>
+</section>
+
+<section class="flex flex-col gap-6">
+  <header class="flex">
+    <h2>Experience</h2>
+  </header>
+
+  <div class="flex flex-col gap-8">
+
+    <!-- Item 1 -->
+    <article class="experience-item">
+      <div class="experience-main">
+        <h3>Senior Frontend Engineer</h3>
+        <p>TechFlow Systems</p>
+
+        <p>
+          Leading the frontend migration from legacy architecture to Next.js.
+          Improved site performance by 40% and established a comprehensive design
+          system used across 5 distinct products.
+        </p>
+
+        <ul>
+          <li>Architected micro-frontend framework</li>
+          <li>Mentored junior developers and conducted code reviews</li>
+          <li>Implemented CI/CD pipelines reducing deployment time by 50%</li>
+        </ul>
+      </div>
+
+      <div class="experience-time">
+        <span>2021 – Present</span>
+      </div>
+    </article>
+
+    <!-- Item 2 -->
+    <article class="experience-item">
+      <div class="experience-main">
+        <h3>Software Developer</h3>
+        <p>Innovate Digital</p>
+
+        <p>
+          Developed and maintained RESTful APIs using Node.js and Express.
+          Collaborated with UX/UI designers to implement responsive interfaces
+          for high-traffic e-commerce platforms.
+        </p>
+
+        <ul>
+          <li>Optimized database queries in PostgreSQL</li>
+          <li>Integrated Stripe payment gateway processing $1M+ monthly</li>
+        </ul>
+      </div>
+
+      <div class="experience-time">
+        <span>2019 – 2021</span>
+      </div>
+    </article>
+
+    <!-- Item 3 -->
+    <article class="experience-item">
+      <div class="experience-main">
+        <h3>Junior Web Developer</h3>
+        <p>Creative Agency X</p>
+
+        <p>
+          Built custom WordPress themes and plugins for diverse client base.
+          Managed website maintenance and troubleshooting for over 30 active
+          client sites.
+        </p>
+      </div>
+
+      <div class="experience-time">
+        <span>2017 – 2019</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="flex flex-col items-center text-center gap-6 py-20">
+
+  <h2 class="text-3xl font-bold">
+    Let's build something amazing together.
+  </h2>
+
+  <p class="max-w-xl text-sm opacity-80">
+    I'm currently available for freelance work or full-time opportunities.
+    If you have a project that needs some creative touch, get in touch!
+  </p>
+
+  <!-- CTA -->
+  <a href="mailto:hello@example.com" class="btn-primary">
+    Send an Email
+  </a>
+
+  <!-- Divider -->
+  <div class="w-full max-w-md h-px bg-white/10 my-6"></div>
+
+  <!-- Social links -->
+  <div class="flex gap-6">
+    <a href="#" class="icon-link">GitHub</a>
+    <a href="#" class="icon-link">LinkedIn</a>
+    <a href="#" class="icon-link">Resume</a>
+  </div>
+
+</section>
+{% endblock %}
+
+{% block cta %}
+  <h1></h1>
+{% endblock %}

@@ -1,19 +1,28 @@
 {# Minimal Django navigation include (no styles) #}
 {% comment %}Site logo / home link{% endcomment %}
-<nav>
-  <div class="nav-brand">
-    <a href="{% url 'home' %}">Home</a>
+<nav class="border flex justify-around items-center p-4 w-full">
+  <div class="nav-brand flex space-x-18">
+    <a href="{% url 'home' %}">Image</a>
+    {% comment %}Primary navigation links{% endcomment %}
+    <ul class="nav-links flex gap-6">
+      <li>
+        <a href="{% url 'home' %}">Home</a>
+      </li>
+        <li>
+        <a href="{% url 'about' %}">About</a>
+      </li>
+      <li>
+        <a href="{% url 'app_home' %}">Apps</a>
+      </li>
+      <li>
+        <a href="{% url 'contact' %}">Contact</a>
+      </li>
+    
+      <li>
+        <a href="{% url 'donate' %}">Donate</a>
+      </li>
+    </ul>
   </div>
-
-  {% comment %}Primary navigation links{% endcomment %}
-  <ul class="nav-links">
-    <li>
-      <a href="{% url 'contact' %}">Contact</a>
-    </li>
-    <li>
-      <a href="{% url 'app_home' %}">Apps</a>
-    </li>
-  </ul>
 
   {% comment %}Authentication links (example){% endcomment %}
   <div class="nav-auth">

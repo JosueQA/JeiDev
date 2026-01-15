@@ -1,6 +1,56 @@
-{% extends "base.html" %}
-{% block title %}App Home{% endblock %}
+{% extends 'base.html' %}
+{% block title %}
+  App Home
+{% endblock %}
 
 {% block content %}
-<h1>Welcome to the App Home Page</h1>
+  <section class="flex flex-col gap-10 py-12 w-full max-w-7xl mx-auto">
+    <!-- Header -->
+    <header class="flex flex-col gap-2">
+      <h1>Discover Software</h1>
+      <p>Aquí publico las aplicaciones que desarrollo como ingeniero de software. Cada proyecto nace como una idea personal y evoluciona para resolver un problema real. Puedes explorar, probar y seguir el progreso de cada una.</p>
+    </header>
+
+    <!-- Categories -->
+    <div class="flex flex-wrap gap-3">
+      <button class="category-pill">All Categories</button>
+      <button class="category-pill">Productivity</button>
+      <button class="category-pill">Dev Tools</button>
+      <button class="category-pill">Multimedia</button>
+      <button class="category-pill">Games</button>
+      <button class="category-pill">Security</button>
+      <button class="category-pill">Utilities</button>
+    </div>
+
+    <!-- Cards grid -->
+    <div class="software-grid">
+      <!-- Card -->
+      {% for app in apps %}
+        <article class="software-card">
+          <div class="flex flex-col gap-3">
+            <h3 class="font-medium">{{ app.name }}</h3>
+            <p class="text-sm">{{ app.description }}</p>
+          </div>
+
+          <div class="flex justify-between items-center">
+            <span class="text-sm">Free</span>
+            <a href="{{ app.app_link }}" class="action-btn">Ver más</a>
+          </div>
+        </article>
+      {% empty %}
+        <p>¡Todavia no hay apps!</p>
+      {% endfor %}
+    </div>
+
+    <!-- Pagination -->
+    <nav class="flex justify-center items-center gap-4">
+      <button>&lt;</button>
+      <button class="page-btn">1</button>
+      <button>2</button>
+      <button>3</button>
+      <span>…</span>
+      <button>12</button>
+      <button>&gt;</button>
+    </nav>
+  </section>
 {% endblock %}
